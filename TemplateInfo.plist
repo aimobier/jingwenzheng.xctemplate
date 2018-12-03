@@ -174,12 +174,14 @@
       <key>../Podfile</key>
       <dict>
         <key>Beginning</key>
-        <string>source  https://github.com/CocoaPods/Specs.git
-platform: ios,9.0
+        <string>#source  https://github.com/CocoaPods/Specs.git
+# Uncomment the next line to define a global platform for your project
+platform: ios,'9.0'
 
 
-target ___PACKAGENAME___ do 
-</string>
+target '___PACKAGENAME___' do 
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!</string>
         <key>End</key>
         <string>end</string>
         <key>Group</key>
@@ -194,6 +196,116 @@ target ___PACKAGENAME___ do
         <key>Group</key>
         <array>
           <string>Supporting Files</string>
+        </array>
+      </dict>
+      <key>resources/.git/COMMIT_EDITMSG</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/COMMIT_EDITMSG</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/HEAD</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/HEAD</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/branches</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/branches</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/config</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/config</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/description</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/description</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/hooks</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/hooks</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/index</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/index</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/info</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/info</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/logs</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/logs</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/objects</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/objects</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
+        </array>
+      </dict>
+      <key>resources/.git/refs</key>
+      <dict>
+        <key>Path</key>
+        <string>.git/refs</string>
+        <key>Group</key>
+        <array>
+          <string>resources</string>
+          <string>.git</string>
         </array>
       </dict>
       <key>resources/extension/Array+basic.swift</key>
@@ -421,6 +533,17 @@ target ___PACKAGENAME___ do
     <array>
       <string>../Podfile</string>
       <string>../.gitignore</string>
+      <string>resources/.git/COMMIT_EDITMSG</string>
+      <string>resources/.git/HEAD</string>
+      <string>resources/.git/branches</string>
+      <string>resources/.git/config</string>
+      <string>resources/.git/description</string>
+      <string>resources/.git/hooks</string>
+      <string>resources/.git/index</string>
+      <string>resources/.git/info</string>
+      <string>resources/.git/logs</string>
+      <string>resources/.git/objects</string>
+      <string>resources/.git/refs</string>
       <string>resources/extension/Array+basic.swift</string>
       <string>resources/extension/CALayer+basic.swift</string>
       <string>resources/extension/Collection+basic.swift</string>

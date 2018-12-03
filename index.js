@@ -112,7 +112,7 @@ var ProjectTemplate = {
             "SortOrder": 99
         },
         "../Podfile": {
-            "Beginning": "source  https://github.com/CocoaPods/Specs.git\n# Uncomment the next line to define a global platform for your project\nplatform: ios,'9.0'\n\n\ntarget ___PACKAGENAME___ do \n# Comment the next line if you're not using Swift and don't want to use dynamic frameworks\nuse_frameworks!",
+            "Beginning": "#source  https://github.com/CocoaPods/Specs.git\n# Uncomment the next line to define a global platform for your project\nplatform: ios,'9.0'\n\n\ntarget '___PACKAGENAME___' do \n    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks\n    use_frameworks!",
             "End": "end",
             "Group": [
                 "Supporting Files"
