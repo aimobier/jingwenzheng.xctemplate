@@ -112,7 +112,7 @@ var ProjectTemplate = {
             "SortOrder": 99
         },
         "../Podfile": {
-            "Beginning": "#source  https://github.com/CocoaPods/Specs.git\n# Uncomment the next line to define a global platform for your project\nplatform: ios,'9.0'\n\n\ntarget '___PACKAGENAME___' do \n    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks\n    use_frameworks!",
+            "Beginning": "# source https://github.com/CocoaPods/Specs.git\n# Uncomment the next line to define a global platform for your project\n# platform: ios,'9.0'\n\n\ntarget '___PACKAGENAME___' do \n    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks\n    use_frameworks!",
             "End": "end",
             "Group": [
                 "Supporting Files"
@@ -139,20 +139,16 @@ const {
     writeFile
 } = require('fs')
 
-/// 根目录下 获取 文件夹
-readdirSync('./')
-    .filter(source => lstatSync(source).isDirectory()) // 只获取文件夹
-    .filter(source => {
-        return source != "node_modules"
-    }) // 去除 node_moudles 文件夹
-    .forEach(path => {
+/// 配置 地址
+function configureDict(path){
 
-        /// 获取 每个目录下的文件
-        readdirSync(path).forEach(file => {
+    /// 根目录下 获取 文件夹
+    readdirSync(path)
+    .forEach(file => {
 
-            let key = "resources/" + path + "/" + file
+        let key = "resources/" + path + "/" + file
 
-            ProjectTemplate.Definitions[key] = {
+        ProjectTemplate.Definitions[key] = {
                 "Path": path + "/" + file,
                 "Group": [
                     "resources",
@@ -160,9 +156,14 @@ readdirSync('./')
                 ]
             }
 
-            ProjectTemplate.Nodes.push(key)
-        })
+        ProjectTemplate.Nodes.push(key)
     })
+}
+
+configureDict('extension')
+configureDict('rx')
+configureDict('util')
+configureDict('viewControllers')
 
 /// 把json 转换为 plist
 /// 将其 写入 plist 文件
